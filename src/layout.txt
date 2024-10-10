@@ -1,0 +1,81 @@
+<ul>
+          <li>
+            <strong>Views: </strong>
+            {image.views}
+          </li>
+          <li>
+            <strong>Downloads: </strong>
+            {image.downloads}
+          </li>
+          <li>
+            <strong>Likes: </strong>
+            {image.likes}
+          </li>
+          <li>
+            Source: Pixabay
+          </li>
+</ul>
+
+<div className="px-6 py-4">
+        <a href={image.pageURL} target="_blank">Download</a>
+      </div>
+
+<div className="px-6 py-4">
+        <div className="font-bod text-purple-500 text-xl mb-2">
+          Image by {image.user}
+        </div>
+      </div>
+
+
+***************************************************************************************************
+
+function App() {
+
+
+  return (
+    <ImageContextProvider>
+      <div className="w-full flex flex-col items-center">
+        <h1 className="text-3xl font-light mt-4 text-green-700"><span className="text-black font-medium">Image</span> Explorer</h1>
+        <SearchBar />
+        <Routes>
+          <Route path="/" element={<Images />}></Route>
+          <Route path="*" element={<h1 className="text-lg m-5">No Page Found</h1>}></Route>
+        </Routes>
+        <Footer />
+      </div>
+    </ImageContextProvider>
+  );
+}
+
+const Images= () => {
+
+  const { isLoading, images } = useContext(ImageContext);
+
+  return (
+    <>
+      {
+        !isLoading && images.length === 0 ? (<h1 className="text-2xl m-5">No Images Found</h1>)
+          : isLoading ? (<Loader />)
+            : (
+              <div className="w-3/4 columns-3 gap-0 m-2 p-4">
+                {
+                  images.map((image) => (
+                    <ImageCards image={image} key={image.id} />
+                  ))
+                }
+              </div>
+            )
+      }
+    </>
+  );
+}
+
+const Footer = () => {
+    return (
+        <footer className="w-full bg-black p-4 text-white text-xl text-center">
+            <p>Images sourced from Pixabay</p>
+        </footer>
+    );
+};
+
+then tell me how do i achieve the functionality i mentioned that when i click search i want to go to /search/searched-term and the images change to the searched images
