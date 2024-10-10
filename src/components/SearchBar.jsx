@@ -21,7 +21,6 @@ const SearchBar = () => {
     }
     setSearchError(false);
     setSearchTerm(inputVal);
-    // navigate("/search");
     setInputVal("");
   };
 
@@ -35,7 +34,6 @@ const SearchBar = () => {
     }
     setSearchError(false);
     setSearchTerm(inputVal);
-    // navigate("/search");
     setInputVal("");
 
   }
@@ -43,7 +41,6 @@ const SearchBar = () => {
   return (
     <div className="max-w-sm overflow-hidden my-10 flex items-center gap-2 rounded-t border-b-2 border-green-950 py-2 px-5 sticky top-2 z-20 bg-white">
       <input type="text" className="text-lg appearance-none bg-transparent focus:outline-none" placeholder={searchError ? "Please type something" : "eg-car"} value={inputVal} onChange={(e) => setInputVal(e.target.value)} onKeyDown={(e) => {
-        console.log(e);
         if (e.code === "Enter") {
           handleEnter();
         }
