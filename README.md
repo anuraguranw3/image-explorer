@@ -1,8 +1,22 @@
-# React + Vite
+# Image Explorer - Search and Download Images
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application to search and download images easily.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can view the live demo of Image Explorer [here](https://image-explorer-project.netlify.app/).
+
+## Technologies Used
+
+- React
+- Tailwind css
+- Context API
+
+## Installation
+
+To run the project locally:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/image-explorer.git
