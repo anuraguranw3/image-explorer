@@ -17,7 +17,6 @@ const ImageContextProvider = ({ children }) => {
             .then(res => res.json())
             .then(data => {
                 setImages(data.hits);
-                console.log(data.hits);
             })
             .catch((error) => setError(error))
             .finally(() => setIsLoading(false))
