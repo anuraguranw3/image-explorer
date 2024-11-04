@@ -13,7 +13,7 @@ const Images = () => {
         !isLoading && images.length === 0 ? (<h1 className="text-2xl m-5">No Images Found</h1>)
           : isLoading ? (<Loader items={10} />)
             : (
-              <div className="w-11/12 columns-1 gap-0 m-2 p-4 md:columns-2 lg:columns-3">
+              <div className="w-[100%] columns-1 gap-0 m-2 p-4 md:columns-2 lg:columns-3">
                 {
                   images.map((image) => (
                     <ImageCards image={image} key={image.id} />
