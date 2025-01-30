@@ -8,8 +8,6 @@ const SearchBar = () => {
   const [inputVal, setInputVal] = useState("");
   const [searchError, setSearchError] = useState(false);
 
-  // const navigate = useNavigate();
-
   const handleClick = (e) => {
     e.preventDefault();
     if (!inputVal.trim()) {
@@ -39,8 +37,8 @@ const SearchBar = () => {
   }
 
   return (
-    <div className="max-w-sm overflow-hidden my-10 flex items-center gap-2 rounded-t border-b-2 border-green-950 py-2 px-5 sticky top-2 z-20 bg-white">
-      <input type="text" className="text-lg appearance-none bg-transparent focus:outline-none" placeholder={searchError ? "Please type something" : "eg-car"} value={inputVal} onChange={(e) => setInputVal(e.target.value)} onKeyDown={(e) => {
+    <div className="w-[95%] sm:w-96 overflow-hidden my-10 flex items-center justify-evenly gap-2 rounded-t border-b-2 border-green-950 py-2 px-5 sticky top-2 z-20 bg-white">
+      <input type="text" className="w-full sm:w-[80%] text-lg appearance-none bg-transparent focus:outline-none" placeholder={searchError ? "Please type something" : "eg-car"} value={inputVal} onChange={(e) => setInputVal(e.target.value)} onKeyDown={(e) => {
         if (e.code === "Enter") {
           handleEnter();
         }
