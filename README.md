@@ -11,6 +11,7 @@ You can view the live demo of Image Explorer [here](https://image-explorer-proje
 - React
 - Tailwind css
 - Context API
+- Pixabay API (for fetching images)
 
 ## Installation
 

@@ -11,7 +11,7 @@ const ImageContextProvider = ({ children }) => {
 
     useEffect(() => {
 
-        fetch(`https://pixabay.com/api/?key=${import.meta.env.VITE_API_KEY}&q=${searchTerm}&image_type=photo&page=${page}&per_page=20`)
+        fetch(`https://pixabay.com/api/?key=${import.meta.env.VITE_API_KEY}&q=${searchTerm}&image_type=photo&page=${page}&per_page=40`)
             .then(res => res.json())
             .then(data => {
                 setImages(prevImages => {
